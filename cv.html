@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CV — Moshiur Farazi</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <style>
+    .cv-download-bar {
+      background: var(--tag-bg);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 1rem 1.2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 2rem;
+      flex-wrap: wrap;
+      gap: 0.8rem;
+    }
+    .cv-download-bar p { font-size: 0.88rem; color: var(--text-muted); }
+    .btn-download {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      padding: 0.4rem 1rem;
+      background: var(--accent);
+      color: #fff;
+      border-radius: 6px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      transition: background var(--transition);
+      text-decoration: none;
+    }
+    .btn-download:hover { background: var(--accent-hover); color: #fff; text-decoration: none; }
+    .cv-section { margin-bottom: 2.5rem; }
+    .cv-section-title {
+      font-family: var(--font-main);
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: var(--text);
+      letter-spacing: -0.01em;
+      border-bottom: 2px solid var(--accent);
+      padding-bottom: 0.4rem;
+      margin-bottom: 1rem;
+    }
+    .cv-row {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 0.3rem 1rem;
+      padding: 0.7rem 0;
+      border-bottom: 1px solid var(--border);
+    }
+    .cv-row:last-child { border-bottom: none; }
+    .cv-main { font-size: 0.88rem; }
+    .cv-main strong { font-size: 0.92rem; }
+    .cv-meta { font-size: 0.8rem; color: var(--text-muted); text-align: right; white-space: nowrap; }
+    .cv-sub { font-size: 0.82rem; color: var(--text-muted); }
+    .cv-bullets { list-style: none; margin-top: 0.3rem; }
+    .cv-bullets li { font-size: 0.82rem; color: var(--text-muted); padding-left: 1rem; position: relative; margin-bottom: 0.15rem; }
+    .cv-bullets li::before { content: '\2013'; position: absolute; left: 0; }
+    .skills-grid { display: flex; flex-wrap: wrap; gap: 0.4rem; }
+    .cv-desc { font-size: 0.82rem; color: var(--text-muted); margin-top: 0.3rem; line-height: 1.5; }
+  </style>
+</head>
+<body>
+
+<header class="mobile-header">
+  <span class="mobile-logo">Moshiur Farazi</span>
+  <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+    <svg viewBox="0 0 24 24"><path d="M3 6h18v2H3V6zm0 5h18v2H3v-2zm0 5h18v2H3v-2z"/></svg>
+  </button>
+</header>
+
+<div class="layout">
+
+  <aside class="sidebar">
+    <div class="sidebar-profile">
+      <div class="profile-img-wrapper">
+        <div class="profile-placeholder">MF</div>
+      </div>
+      <div class="sidebar-name">Moshiur Farazi</div>
+      <div class="sidebar-title">
+        Assistant Professor<br>
+        Data Science &amp; AI, CCIT<br>
+        University of Doha for Science and Technology
+      </div>
+    </div>
+
+    <hr class="sidebar-divider" />
+
+    <div class="sidebar-contact">
+      <div class="sidebar-contact-item">
+        <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"/></svg>
+        <div>
+          <a href="data-u="moshiur.farazi" data-d="udst.edu.qa"></a><br>
+          <a href="data-u="moshiur.farazi" data-d="gmail.com"></a>
+        </div>
+      </div>
+      <div class="sidebar-contact-item">
+        <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+        <span>Doha, Qatar</span>
+      </div>
+    </div>
+
+    <div class="sidebar-social">
+      <a class="social-link" href="https://www.linkedin.com/in/moshiur-farazi/" target="_blank" rel="noopener" title="LinkedIn">
+        <svg viewBox="0 0 24 24"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg>
+      </a>
+      <a class="social-link" data-u="moshiur.farazi" data-d="gmail.com" title="Email">
+        <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"/></svg>
+      </a>
+    </div>
+
+    <hr class="sidebar-divider" />
+
+    <nav>
+      <ul class="sidebar-nav">
+        <li><a href="index.html#about">About</a></li>
+        <li><a href="index.html#news">News</a></li>
+        <li><a href="publications.html">Publications</a></li>
+        <li><a href="index.html#people">People</a></li>
+        <li><a href="index.html#service">Service</a></li>
+        <li><a href="index.html#awards">Awards</a></li>
+        <li><a href="cv.html" class="active">Curriculum Vitae</a></li>
+      </ul>
+    </nav>
+
+    <div class="sidebar-footer">
+      <button class="theme-toggle" id="theme-toggle">&#9790; Dark</button>
+    </div>
+  </aside>
+
+  <main class="main-content">
+    <section class="section">
+      <h2 class="section-title">Curriculum Vitae</h2>
+
+      <div class="cv-download-bar">
+        <p>Download the full CV as a PDF</p>
+        <a class="btn-download" href="assets/Farazi_CV.pdf" download>
+          &darr; Download PDF
+        </a>
+      </div>
+
+      <!-- EDUCATION -->
+      <div class="cv-section">
+        <div class="cv-section-title">Education</div>
+
+        <div class="cv-row">
+          <div class="cv-main">
+            <strong>Ph.D. in Computer Vision and Machine Learning</strong>
+            <div class="cv-sub">Australian National University (ANU), Canberra, Australia</div>
+            <div class="cv-sub">Advisors: Prof. Nick Barnes &amp; Prof. Salman Khan</div>
+            <div class="cv-sub" style="font-style:italic;">Thesis: Visual Reasoning and Image Understanding: A Question Answering Approach</div>
+          </div>
+          <div class="cv-meta">2020</div>
+        </div>
+
+        <div class="cv-row">
+          <div class="cv-main">
+            <strong>M.S. in Biomedical Engineering</strong>
+            <div class="cv-sub">University of British Columbia (UBC), Vancouver, Canada &middot; GPA: 87.1%</div>
+            <div class="cv-sub">Advisors: Prof. Rafeef Garbi &amp; Prof. Sidney Fels</div>
+            <div class="cv-sub" style="font-style:italic;">Thesis: 3D Biomechanical Oropharyngeal Model for Training and Diagnosis of Dysphagia</div>
+          </div>
+          <div class="cv-meta">2015</div>
+        </div>
+
+        <div class="cv-row">
+          <div class="cv-main">
+            <strong>M.S. in Biomedical Image Processing</strong>
+            <div class="cv-sub">Islamic University of Technology (IUT), Dhaka, Bangladesh &middot; GPA: 4.00/4.00 (1st)</div>
+            <div class="cv-sub" style="font-style:italic;">Thesis: Optimization of Elastography Implementation for Breast Cancer Detection</div>
+          </div>
+          <div class="cv-meta">2013</div>
+        </div>
+
+        <div class="cv-row">
+          <div class="cv-main">
+            <strong>B.S. in Electrical and Electronics Engineering</strong>
+            <div class="cv-sub">Islamic University of Technology (IUT), Dhaka, Bangladesh &middot; GPA: 3.99/4.00 (1st)</div>
+            <div class="cv-sub" style="color:#d4880c;font-weight:600;">OIC Gold Medal for Academic Excellence</div>
+          </div>
+          <div class="cv-meta">2011</div>
+        </div>
+      </div>
+
+      <!-- EXPERIENCE -->
+      <div class="cv-section">
+        <div class="cv-section-title">Academic &amp; Research Experience</div>
+
+        <div class="cv-row">
+          <div class="cv-main">
+            <strong>Assistant Professor, Data Science and AI</strong>
+            <div class="cv-sub">University of Doha for Science and Technology (UDST), Doha, Qatar</div>
+          </div>
+          <div class="cv-meta">Aug 2024 &ndash; Present</div>
+        </div>
+
+        <div class="cv-row">
+          <div class="cv-main">
+            <strong>Adjunct Faculty (Level B)</strong>
+            <div class="cv-sub">Australian National University (ANU), College of Engineering, Computing &amp; Cybernetics</div>
+          </div>
+          <div class="cv-meta">Mar 2021 &ndash; Present</div>
+        </div>
+
+        <div class="cv-row">
+          <div class="cv-main">
+            <strong>Research Scientist, Computer Vision and AI</strong>
+            <div class="cv-sub">Data61&ndash;CSIRO, Canberra, Australia</div>
+          </div>
+          <div class="cv-meta">Jun 2020 &ndash; Jul 2024</div>
+        </div>
+
+        <div class="cv-row">
+          <div class="cv-main">
+            <strong>Postgraduate AI Researcher (Ph.D. Candidate)</strong>
+            <div class="cv-sub">Data61&ndash;CSIRO / ANU, Canberra, Australia</div>
+          </div>
+          <div class="cv-meta">Sep 2016 &ndash; Jun 2020</div>
+        </div>
+
+        <div class="cv-row">
+          <div class="cv-main">
+            <strong>Sessional Academic</strong>
+            <div class="cv-sub">Australian National University, CPAS &amp; CECS, Canberra, Australia</div>
+          </div>
+          <div class="cv-meta">Sep 2016 &ndash; Jun 2020</div>
+        </div>
+
+        <div class="cv-row">
+          <div class="cv-main">
+            <strong>Graduate Research Assistant</strong>
+            <div class="cv-sub">University of British Columbia, Biomedical Signal &amp; Image Computing Lab &amp; <a href="https://hct-lab.github.io/" target="_blank" rel="noopener">Human Communication Technologies Lab</a></div>
+          </div>
+          <div class="cv-meta">Sep 2013 &ndash; Dec 2015</div>
+        </div>
+
+        <div class="cv-row">
+          <div class="cv-main">
+            <strong>Graduate Teaching Assistant</strong>
+            <div class="cv-sub">University of British Columbia, Dept. of Electrical and Computer Engineering</div>
+          </div>
+          <div class="cv-meta">Jan 2014 &ndash; Jun 2015</div>
+        </div>
+
+        <div class="cv-row">
+          <div class="cv-main">
+            <strong>Lecturer</strong>
+            <div class="cv-sub">Islamic University of Technology (IUT), Dhaka, Bangladesh</div>
+          </div>
+          <div class="cv-meta">Jan 2012 &ndash; Aug 2013</div>
+        </div>
+      </div>
+
+      <!-- GRANTS -->
+      <div class="cv-section">
+        <div class="cv-section-title">Grants &amp; Funding</div>
+
+        <div class="cv-row">
+          <div class="cv-main">
+            <strong>Life Cycle Sustainability Assessment of Hybrid Aviation Fuel Using ML-Based Optimization of Green and Blue Hydrogen Production</strong>
+            <div class="cv-sub">CoPI &middot; QLTC01-0219-250012 &middot; USD $62,000</div>
+          </div>
+          <div class="cv-meta">2025</div>
+        </div>
+
+        <div class="cv-row">
+          <div class="cv-main">
+            <strong>HairNet: Deep Learning for Cotton Leaf Hair Density Estimation</strong>
+            <div class="cv-sub">CSIRO Machine Learning &amp; AI Future Science Platform (MLAI FSP) &ndash; Seed Funding &middot; AUD $20,000</div>
+          </div>
+          <div class="cv-meta">2021</div>
+        </div>
+      </div>
+
+      <!-- TEACHING -->
+      <div class="cv-section">
+        <div class="cv-section-title">Teaching</div>
+
+        <div class="cv-row">
+          <div class="cv-main">
+            <strong>Assistant Professor &ndash; Course Instructor</strong>
+            <div class="cv-sub">University of Doha for Science and Technology (UDST), Doha, Qatar</div>
+            <div class="cv-desc">Teaching undergraduate and graduate courses in AI, machine learning, and computer vision.</div>
+          </div>
+          <div class="cv-meta">Aug 2024 &ndash; Present</div>
+        </div>
+
+        <div class="cv-row">
+          <div class="cv-main">
+            <strong>Sessional Academic</strong>
+            <div class="cv-sub">Australian National University, CPAS &amp; CECS &middot; 7 semesters &middot; ~400 hours face-to-face</div>
+            <ul class="cv-bullets">
+              <li>ENGN/COMP 6250 &ndash; Professional Practice 1 (S1 &amp; S2 2017, 2018, 2019; S1 2020)</li>
+              <li>ENGN 1218 &ndash; Introduction to Electronics (S2 2017, 2018, 2019)</li>
+              <li>ENGN 2218 &ndash; Electronic Systems and Design (S1 2017, 2018, 2019, 2020)</li>
+              <li>ENGN 3213 &ndash; Digital Systems and Microprocessors (S1 2017)</li>
+            </ul>
+          </div>
+          <div class="cv-meta">Sep 2016 &ndash; Jun 2020</div>
+        </div>
+
+        <div class="cv-row">
+          <div class="cv-main">
+            <strong>Graduate Teaching Assistant</strong>
+            <div class="cv-sub">University of British Columbia, Dept. of Electrical and Computer Engineering</div>
+            <ul class="cv-bullets">
+              <li>EECE 570 &ndash; Fundamentals of Visual Computing (Winter 2014)</li>
+              <li>EECE 380 &ndash; Electrical Engineering Design Studio (Spring 2015)</li>
+              <li>EECE 450 &ndash; Economic Analysis of Engineering Projects (Summer 2015)</li>
+            </ul>
+          </div>
+          <div class="cv-meta">Jan 2014 &ndash; Jun 2015</div>
+        </div>
+
+        <div class="cv-row">
+          <div class="cv-main">
+            <strong>Lecturer</strong>
+            <div class="cv-sub">Islamic University of Technology (IUT) &middot; 4 semesters &middot; avg. class size 150</div>
+            <ul class="cv-bullets">
+              <li>EEE 4205/4206 &ndash; Computer Programming Language + Lab (Summer 2012, 2013)</li>
+              <li>EEE 4554 &ndash; Random Signal Processing Lab (Winter 2012, 2013)</li>
+              <li>EEE 4308 &ndash; Digital Electronics Laboratory (Winter 2013)</li>
+              <li>EEE 4326 &ndash; Electrical and Electronic Technology Lab (Winter 2014)</li>
+            </ul>
+          </div>
+          <div class="cv-meta">Jan 2012 &ndash; Aug 2013</div>
+        </div>
+      </div>
+
+      <!-- SUPERVISION -->
+      <div class="cv-section">
+        <div class="cv-section-title">Student Supervision</div>
+
+        <div class="cv-row">
+          <div class="cv-main">
+            <strong>Hanif Rasyidi</strong> &mdash; Ph.D., Computer Science, ANU (Primary Supervisor)
+            <div class="cv-sub">Deep Learning Approaches for Historical Writer Identification and Document Analysis</div>
+          </div>
+          <div class="cv-meta">Submitted 2026</div>
+        </div>
+
+        <div class="cv-row">
+          <div class="cv-main">
+            <strong>Sameera Ramasinghe</strong> &mdash; Ph.D., Computer Science, ANU (Co-Supervision)
+            <div class="cv-sub">Geometrically structured latent manifolds for conditional GANs</div>
+          </div>
+          <div class="cv-meta">2022</div>
+        </div>
+
+        <div class="cv-row">
+          <div class="cv-main">
+            <strong>Yu Cui</strong> &mdash; M.Phil. / Research Masters, ANU
+            <div class="cv-sub">Visual Relationship Detection using transformer architectures (VReBERT)</div>
+          </div>
+          <div class="cv-meta">2022</div>
+        </div>
+
+        <div class="cv-row">
+          <div class="cv-main">
+            <strong>Ce Wang</strong> &mdash; Research Masters, ANU
+            <div class="cv-sub">Recursive Training for Zero-Shot Semantic Segmentation</div>
+          </div>
+          <div class="cv-meta">2020</div>
+        </div>
+
+        <div class="cv-row">
+          <div class="cv-main">
+            <strong>Additional supervision:</strong> 3 Research Masters students and 4+ undergraduate capstone projects at ANU
+          </div>
+          <div class="cv-meta">2020&ndash;2022</div>
+        </div>
+      </div>
+
+      <!-- AWARDS -->
+      <div class="cv-section">
+        <div class="cv-section-title">Scholarships &amp; Awards</div>
+
+        <div class="cv-row">
+          <div class="cv-main">Top-10 Research Project Pitch, MARS2021 Conference, MLAI FSP &ndash; CSIRO</div>
+          <div class="cv-meta">2021</div>
+        </div>
+        <div class="cv-row">
+          <div class="cv-main">CVPR Outstanding Reviewer Award, Computer Vision Foundation</div>
+          <div class="cv-meta">2020</div>
+        </div>
+        <div class="cv-row">
+          <div class="cv-main">PhD Scholarship + HDR Fee Remission Merit Scholarship + Research Project Award, ANU</div>
+          <div class="cv-meta">2016&ndash;2020</div>
+        </div>
+        <div class="cv-row">
+          <div class="cv-main">Engineers in Scrubs (EiS) Scholarship, NSERC, Government of Canada</div>
+          <div class="cv-meta">2014&ndash;2015</div>
+        </div>
+        <div class="cv-row">
+          <div class="cv-main">International Tuition Award, UBC</div>
+          <div class="cv-meta">2014&ndash;2015</div>
+        </div>
+        <div class="cv-row">
+          <div class="cv-main">Faculty of Applied Science Graduate Award, UBC</div>
+          <div class="cv-meta">2014</div>
+        </div>
+        <div class="cv-row">
+          <div class="cv-main">Commonwealth Scholarship, Imperial College London <em>(Declined)</em></div>
+          <div class="cv-meta">2013</div>
+        </div>
+        <div class="cv-row">
+          <div class="cv-main">Gold Medal for Academic Excellence, Organisation of Islamic Conference (OIC)</div>
+          <div class="cv-meta">2011</div>
+        </div>
+        <div class="cv-row">
+          <div class="cv-main">Undergraduate Scholarship, Organisation of Islamic Conference (OIC)</div>
+          <div class="cv-meta">2007&ndash;2011</div>
+        </div>
+      </div>
+
+      <!-- SKILLS -->
+      <div class="cv-section">
+        <div class="cv-section-title">Technical Skills</div>
+        <div style="padding: 0.5rem 0;">
+          <div style="margin-bottom:0.8rem;">
+            <div style="font-size:0.82rem;color:var(--text-muted);margin-bottom:0.4rem;font-weight:600;">Research Areas</div>
+            <div class="skills-grid">
+              <span class="tag">Computer Vision</span>
+              <span class="tag">Multimodal Deep Learning</span>
+              <span class="tag">Vision-Language Models</span>
+              <span class="tag">Visual Question Answering</span>
+              <span class="tag">Object Detection</span>
+              <span class="tag">Zero-Shot Learning</span>
+              <span class="tag">Image Segmentation</span>
+              <span class="tag">NLP</span>
+              <span class="tag">Medical Imaging</span>
+            </div>
+          </div>
+          <div style="margin-bottom:0.8rem;">
+            <div style="font-size:0.82rem;color:var(--text-muted);margin-bottom:0.4rem;font-weight:600;">Languages</div>
+            <div class="skills-grid">
+              <span class="tag">Python</span>
+              <span class="tag">C</span>
+              <span class="tag">C++</span>
+              <span class="tag">Java</span>
+            </div>
+          </div>
+          <div style="margin-bottom:0.8rem;">
+            <div style="font-size:0.82rem;color:var(--text-muted);margin-bottom:0.4rem;font-weight:600;">Frameworks &amp; Tools</div>
+            <div class="skills-grid">
+              <span class="tag">PyTorch</span>
+              <span class="tag">TensorFlow</span>
+              <span class="tag">Keras</span>
+              <span class="tag">Transformers (BERT, GPT)</span>
+              <span class="tag">LLMs</span>
+              <span class="tag">OpenCV</span>
+              <span class="tag">CUDA / GPU</span>
+              <span class="tag">HPC Clusters</span>
+              <span class="tag">AWS / GCP</span>
+              <span class="tag">Docker</span>
+              <span class="tag">Git</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </section>
+  </main>
+</div>
+
+<script src="assets/js/main.js"></script>
+</body>
+</html>
