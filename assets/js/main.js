@@ -60,7 +60,6 @@ document.addEventListener('DOMContentLoaded', () => {
   // Email deobfuscation
   document.querySelectorAll('[data-u][data-d]').forEach(el => {
     const addr = el.getAttribute('data-u') + '@' + el.getAttribute('data-d');
-    el.href = 'mai' + 'lto:' + addr;
-    if (!el.textContent.trim()) el.textContent = addr;
+    el.setAttribute('href', 'mailto:' + addr);
   });
 });
