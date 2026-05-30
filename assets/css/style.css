@@ -479,6 +479,9 @@ a:hover { color: var(--accent-hover); text-decoration: underline; }
 
 .hamburger svg { width: 22px; height: 22px; fill: currentColor; }
 
+/* --- Mobile profile header (inline at top of main content) --- */
+.mobile-profile { display: none; }
+
 /* --- Responsive --- */
 @media (max-width: 768px) {
   .mobile-header { display: flex; }
@@ -492,10 +495,66 @@ a:hover { color: var(--accent-hover); text-decoration: underline; }
 
   .sidebar.open { transform: translateX(0); }
 
+  .sidebar-profile { display: none; }
+  .sidebar-contact { display: none; }
+  .sidebar-social:not(.mobile-profile-social) { display: none; }
+  .sidebar .sidebar-divider:first-of-type,
+  .sidebar .sidebar-divider:nth-of-type(2) { display: none; }
+
+  .mobile-profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .mobile-profile .profile-img-wrapper {
+    width: 110px;
+    height: 110px;
+    margin-bottom: 0.8rem;
+  }
+
+  .mobile-profile-name {
+    font-family: var(--font-main);
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: 0.2rem;
+  }
+
+  .mobile-profile-title {
+    font-size: 0.82rem;
+    color: var(--text-muted);
+    line-height: 1.4;
+    margin-bottom: 0.3rem;
+  }
+
+  .mobile-profile-location {
+    font-size: 0.72rem;
+    color: var(--text-muted);
+    margin-bottom: 0.8rem;
+  }
+
+  .mobile-profile-social {
+    margin-bottom: 0;
+  }
+
   .main-content {
     margin-left: 0;
     padding: 5rem 1.2rem 3rem;
     max-width: 100%;
+  }
+
+  .research-interests {
+    flex-wrap: wrap;
+  }
+
+  .tag {
+    max-width: 100%;
+    word-break: break-word;
   }
 
   .pub-item { flex-direction: column; gap: 0.5rem; }
