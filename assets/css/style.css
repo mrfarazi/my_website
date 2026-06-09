@@ -532,12 +532,6 @@ a:hover { color: var(--accent-hover); text-decoration: underline; }
     margin-bottom: 0.3rem;
   }
 
-  .mobile-profile-location {
-    font-size: 0.72rem;
-    color: var(--text-muted);
-    margin-bottom: 0.8rem;
-  }
-
   .mobile-profile-social {
     margin-bottom: 0;
   }
